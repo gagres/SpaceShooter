@@ -1,6 +1,8 @@
 {
   "resources": [
     {"id":{"name":"obj_tiro_inimigo_1","path":"objects/obj_tiro_inimigo_1/obj_tiro_inimigo_1.yy",},"order":1,},
+    {"id":{"name":"obj_inimigo_explodiu","path":"objects/obj_inimigo_explodiu/obj_inimigo_explodiu.yy",},"order":2,},
+    {"id":{"name":"spr_inimigo_explodiu","path":"sprites/spr_inimigo_explodiu/spr_inimigo_explodiu.yy",},"order":2,},
     {"id":{"name":"spr_impacto_tiro","path":"sprites/spr_impacto_tiro/spr_impacto_tiro.yy",},"order":0,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"obj_tiro_player","path":"objects/obj_tiro_player/obj_tiro_player.yy",},"order":1,},

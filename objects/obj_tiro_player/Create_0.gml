@@ -9,3 +9,4 @@ image_yscale = 3;
 alarm[0] = 2;
 
 bullet_color = choose(c_aqua);
+bullet_brilho = spr_brilho_tiro;

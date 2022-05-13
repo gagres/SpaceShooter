@@ -29,5 +29,12 @@ if (y > min_player_vposition) {
 	y = min_player_vposition;
 }
 
+if (keyboard_check_pressed(vk_up) && _bullet_level < 5)
+{
+	_bullet_level++;
+} else if (keyboard_check_pressed(vk_down) && _bullet_level > 1) {
+	_bullet_level--;
+}
+
 atirando();
 

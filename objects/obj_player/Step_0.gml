@@ -31,3 +31,12 @@ if (y > min_player_vposition) {
 
 atirando();
 
+// apenas se for menor do que 5
+if (keyboard_check_pressed(vk_up) && _level_bullet < 5) {
+	_level_bullet++;
+}
+
+// apenas se for menor do que 5
+if (keyboard_check_pressed(vk_down) && _level_bullet > 1) {
+	_level_bullet--;
+}

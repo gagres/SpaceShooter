@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // iniciando variáveis
-_speed = 5;
+_speed = 8;
 
 atirando = function() {
 	var fire = keyboard_check_pressed(vk_space);

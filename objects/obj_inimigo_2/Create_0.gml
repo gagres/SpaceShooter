@@ -19,3 +19,5 @@ atirando = function () {
 		instance_create_layer(x - 3, y + (sprite_height / 3), "Tiros", obj_tiro_inimigo_2);
 	}
 }
+
+pontos = 20;

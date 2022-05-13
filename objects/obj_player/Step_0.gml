@@ -23,5 +23,11 @@ right = keyboard_check(ord("D"));
 y += (down - up) * _speed;
 x += (right - left) * _speed;
 
+var min_player_vposition = room_height - 50;
+
+if (y > min_player_vposition) {
+	y = min_player_vposition;
+}
+
 atirando();
 

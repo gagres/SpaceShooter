@@ -3,6 +3,7 @@
 
 // iniciando variáveis
 _speed = 5;
+vida = 3;
 
 _cadence = room_speed / 2;
 

@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+chance = 10;
+
 _hspeed = 7;
 
 if (x < room_width / 2) {

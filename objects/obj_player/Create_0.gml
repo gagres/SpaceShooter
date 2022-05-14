@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // iniciando variáveis
-_speed = 8;
+_speed = 5;
 
 _cadence = room_speed / 2;
 
@@ -40,6 +40,24 @@ criar_tiro_4 = function() {
 criar_tiro_5 = function () {
 	criar_tiro_2();
 	criar_tiro_4();
+}
+
+upgrade_bullet_level = function () {
+	if (_bullet_level < 5) {
+		_bullet_level++;
+	}
+}
+
+upgrade_speed = function () {
+	if (_speed < 10) {
+		_speed += .5;
+	}
+}
+
+upgrade_bullet_speed = function () {
+	if (_cadence > 10) {
+		_cadence *= 0.9;
+	}
 }
 
 atirando = function() {

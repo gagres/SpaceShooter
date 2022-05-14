@@ -44,3 +44,8 @@ if (keyboard_check_pressed(vk_left) && _cadence > 20) {
 
 atirando();
 
+if (keyboard_check_pressed(ord("E"))) {
+	var shield = instance_create_layer(x, y, "Shield", obj_shield);
+	shield.alvo = id;
+}
+

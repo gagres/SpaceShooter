@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_inimigo_1",
-    "path": "sprites/spr_inimigo_1/spr_inimigo_1.yy",
+    "name": "spr_shield",
+    "path": "sprites/spr_shield/spr_shield.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,20 +21,20 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_shield","path":"objects/obj_shield/obj_shield.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Inimigos",
-    "path": "folders/Objects/Inimigos.yy",
+    "name": "PowerUp",
+    "path": "folders/Objects/PowerUp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_inimigo_1",
+  "name": "obj_shield",
   "tags": [],
   "resourceType": "GMObject",
 }

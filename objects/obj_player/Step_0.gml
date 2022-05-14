@@ -36,5 +36,11 @@ if (keyboard_check_pressed(vk_up) && _bullet_level < 5)
 	_bullet_level--;
 }
 
+if (keyboard_check_pressed(vk_left) && _cadence > 20) {
+	_cadence -= room_speed / 10;
+} else if (keyboard_check_pressed(vk_right) && _cadence < room_speed) {
+	_cadence += room_speed / 10;
+}
+
 atirando();
 

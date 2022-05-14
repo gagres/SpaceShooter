@@ -28,13 +28,18 @@ criar_tiro_3 = function () {
 
 criar_tiro_4 = function() {
 	var y_tiro = y - (sprite_height / 2);
-	instance_create_layer(x, y_tiro, "Tiros", obj_tiro_player);
-	var tiro_2 = instance_create_layer(x - 60, y_tiro, "Tiros", obj_tiro_player);
-	tiro_2.hspeed = -3;
-	tiro_2.image_angle = tiro_2 - 90;
-	var tiro_3 = instance_create_layer(x + 60, y_tiro, "Tiros", obj_tiro_player);
-	tiro_3.hspeed = 3;
-	tiro_3.image_angle = tiro_3 + 90;
+	var count = 0;
+	repeat(3) {
+		var tiro = instance_create_layer(x, y_tiro, "Tiros", obj_tiro_player);
+		tiro.direction = 65 + 25 * count;
+		tiro.image_angle = tiro.direction - 90;
+		count++;
+	}
+}
+
+criar_tiro_5 = function () {
+	criar_tiro_2();
+	criar_tiro_4();
 }
 
 atirando = function() {
@@ -49,6 +54,8 @@ atirando = function() {
 			criar_tiro_3();
 		} else if (_bullet_level == 4) {
 			criar_tiro_4();
+		} else {
+			criar_tiro_5();
 		}
 	}
 }

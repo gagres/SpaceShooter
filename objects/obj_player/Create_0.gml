@@ -78,3 +78,10 @@ atirando = function() {
 		}
 	}
 }
+
+perde_vida = function () {
+	vida--;
+	if (vida <= 0) {
+		instance_destroy();
+	}
+}

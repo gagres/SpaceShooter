@@ -11,6 +11,8 @@ proximo_level = 20;
 
 enemies = [obj_inimigo_1];
 
+end_game = false;
+
 ///@method ganha_pontos(pontos)
 ganha_pontos = function (_pontos) {
 	pontos += _pontos;

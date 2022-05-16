@@ -4,6 +4,8 @@
 // iniciando variáveis
 _speed = 5;
 vida = 3;
+available_shields = 3;
+shield_active = false;
 
 _cadence = room_speed / 2;
 
@@ -80,8 +82,26 @@ atirando = function() {
 }
 
 perde_vida = function () {
-	vida--;
-	if (vida <= 0) {
+	if (vida > 1) {
+		screenshake(3);
+		vida--;
+	} else {
+		screenshake(20);
 		instance_destroy();
 	}
+}
+
+activate_shield = function () {
+	if (available_shields > 0 && !shield_active) {
+		if (keyboard_check_pressed(ord("E"))) {
+			var shield = instance_create_layer(x, y, "Shield", obj_shield);
+			shield.alvo = id;
+			available_shields--;
+			shield_active = true;
+		}
+	}
+}
+
+deactivate_shield = function () {
+	shield_active = false;
 }

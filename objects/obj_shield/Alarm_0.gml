@@ -8,4 +8,4 @@ if (image_index == 0) {
 image_index--;
 image_alpha -= .2;
 
-alarm[0] = room_speed * 2;
+alarm[0] = duration;

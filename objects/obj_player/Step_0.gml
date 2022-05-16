@@ -23,6 +23,9 @@ right = keyboard_check(ord("D"));
 y += (down - up) * _speed;
 x += (right - left) * _speed;
 
+x = clamp(x, 64, 1856);
+y = clamp(y, 90, 992);
+
 var min_player_vposition = room_height - 50;
 
 if (y > min_player_vposition) {
@@ -43,9 +46,4 @@ if (keyboard_check_pressed(vk_left) && _cadence > 20) {
 }
 
 atirando();
-
-if (keyboard_check_pressed(ord("E"))) {
-	var shield = instance_create_layer(x, y, "Shield", obj_shield);
-	shield.alvo = id;
-}
-
+activate_shield();

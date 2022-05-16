@@ -1,5 +1,6 @@
 /// @description Iniciando
 // You can write your code in this editor
+randomize();
 
 alarm[0] = room_speed;
 
@@ -15,7 +16,7 @@ end_game = false;
 
 ///@method ganha_pontos(pontos)
 ganha_pontos = function (_pontos) {
-	pontos += _pontos;
+	pontos += _pontos * level;
 	if (pontos >= proximo_level) {
 		proximo_level *= 2;
 		level++;
@@ -31,4 +32,3 @@ criar_inimigo = function () {
 	var enemy_type = irandom(array_length(enemies) - 1);
 	instance_create_layer(_hposition, _vposition, "Inimigos", enemies[enemy_type]);
 }
-

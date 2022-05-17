@@ -33,6 +33,7 @@
     {"id":{"name":"animations","path":"scripts/animations/animations.yy",},"order":1,},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},"order":0,},
     {"id":{"name":"spr_background_extra_3","path":"sprites/spr_background_extra_3/spr_background_extra_3.yy",},"order":3,},
+    {"id":{"name":"sq_player_completed_level","path":"sequences/sq_player_completed_level/sq_player_completed_level.yy",},"order":3,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":1,},
     {"id":{"name":"obj_impacto_tiro","path":"objects/obj_impacto_tiro/obj_impacto_tiro.yy",},"order":0,},
     {"id":{"name":"spr_shield","path":"sprites/spr_shield/spr_shield.yy",},"order":1,},

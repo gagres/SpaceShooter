@@ -9,16 +9,18 @@
 */
 
 _speed = 10;
-estado_atual = "estado 1";
+estado_atual = "estado 2";
 delay_tiro = room_speed / 2;
 espera_tiro = 0;
 delay_troca_estado = room_speed * 5;
-espera_troca_estado = 0;
+espera_troca_estado = delay_troca_estado;
 
 vida_max = 2000;
-vida_atual = vida_max;
+vida_atual = 0;
+minions = 0;
 
 reset = function () {
+	sprite_index = spr_boss;
 	hspeed = 0;
 }
 
@@ -26,6 +28,9 @@ troca_estado = function () {
 	if (espera_troca_estado <= 0) {
 		reset();
 		estado_atual = choose("estado 1", "estado 2", "estado 3");
+		if (vida_atual < vida_max / 2) {
+			estado_atual = choose("estado 1", "estado 2", "estado 3", "estado 4");
+		}
 		espera_troca_estado = delay_troca_estado;
 	}
 	espera_troca_estado--;
@@ -79,4 +84,29 @@ executa_estado_3 = function () {
 		criar_tiro_1(true);
 	}
 	espera_tiro--;
+}
+
+executa_estado_4 = function () {
+	x += sign((room_width / 2) - x) * 3;
+	
+	if (minions == 0) {
+		sprite_index = spr_boss_shield;
+		var _minion = instance_create_layer(128, 672, "Inimigos", obj_boss_minion);
+		_minion.image_angle = 90;
+		_minion = instance_create_layer(1760, 672, "Inimigos", obj_boss_minion);
+		_minion.image_angle = 270;
+		minions = 2;
+	}
+}
+
+recuperar_vida = function () {
+	vida_atual += 5;
+}
+
+minion_destruido = function () {
+	minions--;
+	if (minions < 1) {
+		espera_troca_estado = 0;
+		troca_estado();
+	}
 }

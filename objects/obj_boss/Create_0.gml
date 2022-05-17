@@ -12,30 +12,71 @@ _speed = 10;
 estado_atual = "estado 1";
 delay_tiro = room_speed / 2;
 espera_tiro = 0;
-delay_troca_estado = room_speed * 10;
-espera_troca_estado = delay_troca_estado;
+delay_troca_estado = room_speed * 5;
+espera_troca_estado = 0;
+
+vida_max = 2000;
+vida_atual = vida_max;
+
+reset = function () {
+	hspeed = 0;
+}
 
 troca_estado = function () {
-	estado_atual = choose("estado 1", "estado 2");
-	show_debug_message(estado_atual);
-	espera_troca_estado = delay_troca_estado;
+	if (espera_troca_estado <= 0) {
+		reset();
+		estado_atual = choose("estado 1", "estado 2", "estado 3");
+		espera_troca_estado = delay_troca_estado;
+	}
+	espera_troca_estado--;
+}
+
+criar_tiro_1 = function (_direita = false) {
+	var posx = -160;
+	if (_direita) posx = 160;
+	instance_create_layer(x + posx, y + 10, "Tiros", obj_tiro_inimigo_1);
+}
+
+criar_tiro_2 = function () {
+	instance_create_layer(x, y + 80, "Tiros", obj_tiro_inimigo_2);
+}
+
+mover_horizontalmente = function () {
+	if (x <= 288) _speed *= -1;
+	else if (x >= 1632) _speed *= -1;
+	hspeed = _speed;
 }
 
 
-executar_estado_1 = function () {
+executa_estado_1 = function () {
 	if (espera_tiro <= 0) {
-		instance_create_layer(x, y + 80, "Tiros", obj_tiro_inimigo_2);
+		criar_tiro_2();
 		espera_tiro = delay_tiro;
 	}
+	espera_tiro--;
 }
 
 executa_estado_2 = function () {
 	if (espera_tiro <= 0) {
-		instance_create_layer(x - 160, y + 10, "Tiros", obj_tiro_inimigo_1);
-		instance_create_layer(x + 160, y + 10, "Tiros", obj_tiro_inimigo_1);
+		criar_tiro_1();
+		criar_tiro_1(true);
 		espera_tiro = delay_tiro * .5;
 	}
-	if (x <= 288) _speed *= -1;
-	else if (x >= 1632) _speed *= -1;
-	hspeed = _speed;
+	mover_horizontalmente();
+	espera_tiro--;
+}
+
+executa_estado_3 = function () {
+	if (espera_tiro <= 0) {
+		criar_tiro_2();
+		espera_tiro = delay_tiro * 2;
+	}
+	var espera_tiro_1 = delay_tiro round(delay_tiro / 4);
+	if (espera_tiro == espera_tiro_1) {
+		criar_tiro_1();
+	}
+	if (espera_tiro == espera_tiro_1 + 10) {
+		criar_tiro_1(true);
+	}
+	espera_tiro--;
 }

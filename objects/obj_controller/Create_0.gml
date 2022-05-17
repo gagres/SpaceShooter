@@ -6,14 +6,14 @@ alarm[0] = room_speed;
 
 pontos = 0;
 
-level = 9;
+level = 1;
 
 proximo_level = 20;
 
 enemies = [obj_inimigo_1];
 end_game = false;
 boss_ta_on = false;
-level_finished = false;
+is_level_finished = false;
 
 ///@method ganha_pontos(pontos)
 ganha_pontos = function (_pontos) {
@@ -40,5 +40,5 @@ criar_inimigo = function () {
 }
 
 finish_level = function () {
-	level_finished = true;
+	is_level_finished = true;
 }

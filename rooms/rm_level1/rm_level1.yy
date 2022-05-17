@@ -35,8 +35,8 @@
   "creationCodeFile": "${project_dir}/rooms/Game/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_6C38F6C","path":"rooms/Game/Game.yy",},
-    {"name":"inst_50AE011C","path":"rooms/Game/Game.yy",},
+    {"name":"inst_6C38F6C","path":"rooms/rm_level1/rm_level1.yy",},
+    {"name":"inst_50AE011C","path":"rooms/rm_level1/rm_level1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -64,7 +64,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Game",
+  "name": "rm_level1",
   "tags": [],
   "resourceType": "GMRoom",
 }

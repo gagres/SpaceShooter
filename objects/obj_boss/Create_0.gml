@@ -16,7 +16,7 @@ delay_troca_estado = room_speed * 5;
 espera_troca_estado = delay_troca_estado;
 
 vida_max = 2000;
-vida_atual = 0;
+vida_atual = vida_max;
 minions = 0;
 
 reset = function () {

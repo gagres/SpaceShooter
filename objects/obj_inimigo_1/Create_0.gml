@@ -2,7 +2,7 @@
 // You can write your code in this editor
 vspeed += 4;
 
-chance = 50;
+chance = 25;
 
 if (place_meeting(x, y, obj_inimigo_1)) {
 	instance_destroy(id, false)

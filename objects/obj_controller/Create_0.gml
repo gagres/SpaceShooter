@@ -23,9 +23,9 @@ ganha_pontos = function (_pontos) {
 }
 
 passar_de_nivel = function () {
-	proximo_level *= 2;
+	proximo_level *= 1.5;
 	level++;
-	if (level == 2) {
+	if (level == 4) {
 		array_push(enemies, obj_inimigo_2);
 	}
 }

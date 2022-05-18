@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-chance = 10;
+chance = 35;
 
 _hspeed = 7;
 

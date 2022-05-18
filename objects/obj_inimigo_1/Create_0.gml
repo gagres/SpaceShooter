@@ -11,6 +11,7 @@ if (place_meeting(x, y, obj_inimigo_1)) {
 atirando = function() {
 	if (y > 0) {
 		instance_create_layer(x - 3, y + (sprite_height / 2), "Tiros", obj_tiro_inimigo_1);
+		audio_play_sound(sfx_laser1, 2, false);
 	}
 }
 

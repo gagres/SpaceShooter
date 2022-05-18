@@ -9,6 +9,7 @@ function destroy_boss_sequence() {
 	var elementos = layer_get_all_elements("Boss_Entrada");
 	layer_sequence_destroy(elementos[0]);
 	instance_create_layer(960, 256, "Boss", obj_boss);
+	audio_play_sound(snd_boss_fight, 0, true);
 }
 
 function level_finished() {

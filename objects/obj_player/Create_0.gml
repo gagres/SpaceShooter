@@ -66,6 +66,7 @@ upgrade_bullet_speed = function () {
 atirando = function() {
 	if (keyboard_check(vk_space) && alarm[0] == -1) {
 		alarm[0] = _cadence;
+		audio_play_sound(sfx_laser2, 2, false);
 		
 		if (_bullet_level == 1) {
 			criar_tiro_1();
@@ -98,10 +99,12 @@ activate_shield = function () {
 			shield.alvo = id;
 			available_shields--;
 			shield_active = true;
+			audio_play_sound(sfx_shieldUp, 1, 0);
 		}
 	}
 }
 
 deactivate_shield = function () {
 	shield_active = false;
+	audio_play_sound(sfx_shieldDown, 1, 0);
 }

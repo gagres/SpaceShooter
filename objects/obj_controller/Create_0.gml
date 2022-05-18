@@ -1,6 +1,5 @@
 /// @description Iniciando
 // You can write your code in this editor
-randomize();
 
 alarm[0] = room_speed;
 
@@ -8,7 +7,7 @@ pontos = 0;
 
 level = 1;
 
-proximo_level = 1;
+proximo_level = 100;
 
 enemies = [obj_inimigo_1];
 end_game = false;
@@ -51,4 +50,10 @@ finish_level = function () {
 
 player_killed = function () {
 	global.deaths++;
+}
+
+start_boss_fight = function () {
+	audio_sound_gain(snd_level, 0, 2000);
+	layer_sequence_create("Boss_Entrada", 960, 512, sq_boss_entrando);
+	boss_ta_on = true;
 }

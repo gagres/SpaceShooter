@@ -10,11 +10,11 @@
 
 pontos = 300;
 _speed = 10;
-estado_atual = "estado 2";
+estado_atual = "estado 1";
 delay_tiro = room_speed / 2;
 espera_tiro = 0;
 delay_troca_estado = room_speed * 5;
-espera_troca_estado = delay_troca_estado;
+espera_troca_estado = 0;
 
 vida_max = 2000;
 vida_atual = vida_max;
@@ -58,6 +58,7 @@ executa_estado_1 = function () {
 	if (espera_tiro <= 0) {
 		criar_tiro_2();
 		espera_tiro = delay_tiro;
+		audio_play_sound(sfx_laser1, 1, 0);
 	}
 	espera_tiro--;
 }
@@ -67,6 +68,7 @@ executa_estado_2 = function () {
 		criar_tiro_1();
 		criar_tiro_1(true);
 		espera_tiro = delay_tiro * .5;
+		audio_play_sound(sfx_laser1, 1, 0);
 	}
 	mover_horizontalmente();
 	espera_tiro--;
@@ -76,6 +78,7 @@ executa_estado_3 = function () {
 	if (espera_tiro <= 0) {
 		criar_tiro_2();
 		espera_tiro = delay_tiro * 2;
+		audio_play_sound(sfx_laser1, 1, 0);
 	}
 	var espera_tiro_1 = delay_tiro round(delay_tiro / 4);
 	if (espera_tiro == espera_tiro_1) {

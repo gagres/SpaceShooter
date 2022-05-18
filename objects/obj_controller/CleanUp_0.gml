@@ -2,3 +2,4 @@
 // You can write your code in this editor
 
 update_max_points();
+audio_stop_all();

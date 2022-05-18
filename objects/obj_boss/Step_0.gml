@@ -14,7 +14,3 @@ if (estado_atual == "estado 1") {
 if (estado_atual != "estado 4") {
 	troca_estado();
 }
-
-if (keyboard_check_pressed(ord("P"))) {
-	vida_atual -= 100;
-}

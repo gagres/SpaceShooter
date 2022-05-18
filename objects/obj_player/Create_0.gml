@@ -83,6 +83,7 @@ atirando = function() {
 }
 
 perde_vida = function () {
+	audio_play_sound(sfx_lose, 1, 0);
 	if (vida > 1) {
 		screenshake(3);
 		vida--;

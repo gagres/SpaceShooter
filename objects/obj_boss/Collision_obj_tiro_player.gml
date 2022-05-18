@@ -4,7 +4,7 @@
 if (estado_atual == "estado 4") return;
 
 instance_destroy(other);
-vida_atual -= 5;
+vida_atual -= 1;
 
 if (vida_atual <= 0) {
 	instance_destroy();

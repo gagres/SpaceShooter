@@ -3,9 +3,7 @@
 
 if (!instance_exists(obj_inimigo_1)) {
 	if (level < 10) {
-		repeat(level * 5) {
-			criar_inimigo();
-		}
+		criar_inimigo();
 	} else if (
 		!instance_exists(obj_inimigo_1) &&
 		!boss_ta_on

@@ -18,3 +18,8 @@ function level_finished() {
 	layer_sequence_create("Sequences", player_x, player_y, sq_player_completed_level);
 	if (instance_exists(obj_controller)) obj_controller.finish_level();
 }
+
+function end_level() {
+	var _transicao = instance_create_layer(0, 0, "Sequences", obj_transicao);
+	_transicao.destino = rm_inicio;
+}

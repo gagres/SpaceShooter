@@ -8,6 +8,7 @@
 	Estado especial 1 = Ficar invunerável enquanto cria 2 minions para recuperar vida
 */
 
+pontos = 300;
 _speed = 10;
 estado_atual = "estado 2";
 delay_tiro = room_speed / 2;

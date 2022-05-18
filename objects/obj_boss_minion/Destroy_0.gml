@@ -6,3 +6,5 @@ instance_create_layer(x, y, layer, obj_inimigo_explodiu);
 if (instance_exists(obj_boss)) {
 	obj_boss.minion_destruido();
 }
+
+enemy_killed(pontos);

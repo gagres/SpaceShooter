@@ -3,6 +3,7 @@
 
 tempo_entre_tiros = room_speed / 2;
 
+pontos = 40;
 vida_atual = 10;
 escala = 1;
 aumento_escala = 0.01

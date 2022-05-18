@@ -29,6 +29,7 @@
     {"id":{"name":"spr_tiro_inimigo_2","path":"sprites/spr_tiro_inimigo_2/spr_tiro_inimigo_2.yy",},"order":4,},
     {"id":{"name":"spr_tiro_player","path":"sprites/spr_tiro_player/spr_tiro_player.yy",},"order":1,},
     {"id":{"name":"obj_tiro_2_player","path":"objects/obj_tiro_2_player/obj_tiro_2_player.yy",},"order":2,},
+    {"id":{"name":"rm_inicializar","path":"rooms/rm_inicializar/rm_inicializar.yy",},"order":3,},
     {"id":{"name":"obj_shield","path":"objects/obj_shield/obj_shield.yy",},"order":1,},
     {"id":{"name":"obj_tiro_inimigo_2","path":"objects/obj_tiro_inimigo_2/obj_tiro_inimigo_2.yy",},"order":4,},
     {"id":{"name":"spr_end_game","path":"sprites/spr_end_game/spr_end_game.yy",},"order":8,},
@@ -48,6 +49,8 @@
     {"id":{"name":"obj_tiro_minion","path":"objects/obj_tiro_minion/obj_tiro_minion.yy",},"order":5,},
     {"id":{"name":"spr_boss_shield","path":"sprites/spr_boss_shield/spr_boss_shield.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
+    {"id":{"name":"game_score","path":"scripts/game_score/game_score.yy",},"order":2,},
+    {"id":{"name":"obj_pontos","path":"objects/obj_pontos/obj_pontos.yy",},"order":12,},
     {"id":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},"order":0,},
   ],
   "Options": [
@@ -62,6 +65,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_inicializar","path":"rooms/rm_inicializar/rm_inicializar.yy",},},
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
     {"roomId":{"name":"rm_level1","path":"rooms/rm_level1/rm_level1.yy",},},
     {"roomId":{"name":"rm_pontos","path":"rooms/rm_pontos/rm_pontos.yy",},},

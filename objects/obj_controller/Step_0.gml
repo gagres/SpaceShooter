@@ -4,6 +4,7 @@
 if (!instance_exists(obj_player) && !is_level_finished) {
 	if (!end_game) {
 		layer_sequence_create("Sequences", room_width / 2, room_height / 2, sq_end_game);
+		player_killed();
 	}
 	end_game = true;
 	

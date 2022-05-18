@@ -4,9 +4,3 @@ function screenshake(_shake = 5){
 	var screen = instance_create_layer(0, 0, "Shield", obj_screenshake);
 	screen.shake = _shake;
 }
-
-function ganhando_pontos(_pontos) {
-	if (instance_exists(obj_controller)) {
-		obj_controller.ganha_pontos(_pontos);
-	}
-}

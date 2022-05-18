@@ -8,7 +8,7 @@ pontos = 0;
 
 level = 1;
 
-proximo_level = 20;
+proximo_level = 1;
 
 enemies = [obj_inimigo_1];
 end_game = false;
@@ -39,6 +39,16 @@ criar_inimigo = function () {
 	instance_create_layer(_hposition, _vposition, "Inimigos", enemies[enemy_type]);
 }
 
+update_max_points = function () {
+	if (pontos > global.max_points) {
+		global.max_points = pontos;
+	}
+}
+
 finish_level = function () {
 	is_level_finished = true;
+}
+
+player_killed = function () {
+	global.deaths++;
 }
